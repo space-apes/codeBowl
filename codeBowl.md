@@ -1,10 +1,37 @@
 
-# Incremental Multi-App Project for Remaining Stepping Stones: CodeBowl
-Turn-based, tile-based game with RPG elements based loosely around soccer but with ability to knock players out. Based on classic board game: Blood Bowl. 
-- teams of 7vs7 spread out on 20x20 grid
-- goal is to get ball into opponent's goal or kill all opponent team members
-- users can log in and persist their data (including team and win stats)
-- users can compete in 1v1 matches with a live chat client 
+# Project 7: CodeBowl
+Turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+- teams of 7vs7 spread out on 20Lx11W grid
+- team members have varying stats (movement per action, armor, strength, agility)
+- goals are to score points by getting ball into enemy goal zone or remove opponents from field
+- winner is player with highest score after all roundsor player that eliminates all opponents from field
+
+
+# High Level Non-Functional Requirements
+- sound OOP design
+- web application
+- multi-user
+- persistent storage
+- attention to common web application security concerns
+- attention to privacy concerns with varying resource access for different types of users
+- networked gameplay with 2 simultaneous players per game
+
+# App Modes / High Level Functional Requirements
+- login mode
+- register/create account mode
+- create team mode
+- manage team mode
+- show leaderboard mode
+- game mode with synchronous game moves and asynchronous chat 
+- show game results mode
+
+# User Data / Privacy Requirements
+- persistent user data
+- guests can spectate matches and have access to match history (leaderboard mode)
+- Coaches can create teams
+- CSRF
+- if using SQL backend, prevent SQL injection
+
 
 ### Mapping of CodeBowl elements to quick start stepping stone concepts
 - SS3(Forms API, Validation) 
