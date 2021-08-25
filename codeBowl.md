@@ -1,6 +1,6 @@
 
 # Project 7: CodeBowl
-One Versus One turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+CodeBowl is a One Versus One, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
 - Turn-Based: User1 chooses actions for players on their team, then User2 chooses actions for players on their team
 - Tile-Based: teams of 7vs7 players spread out on 20Lx11W tile grid
 - Risk-management: all actions have probabilities of failure. Strategy and careful team-building will decrease chances for failure.
