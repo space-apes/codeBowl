@@ -1,11 +1,12 @@
 
 # Project 7: CodeBowl
-CodeBowl is a One Versus One, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+- 1v1: this game is a 2 player competitive game
 - Turn-Based: User1 chooses actions for players on their team, then User2 chooses actions for players on their team
 - Tile-Based: teams of 7vs7 players spread out on 20Lx11W tile grid
-- Risk-management: all actions have probabilities of failure. Strategy and careful team-building will decrease chances for failure.
-- RPG Elements: teams are built and persist with players having stats that affect their abilities
-- To Win: be player with highest score after all rounds complete or player that eliminates all opponents from field
+- Risk-management: all actions players attempt have probabilities of failure. Strategy and careful team-building will decrease those chances
+- RPG Elements: teams are built and persist with players having stats that affect their abilities. Your players may die and you may buy new players with money from games
+- Win Condition: be user with highest score after all rounds complete or user that eliminates all opponents players from field
 
 # High Level Non-Functional Requirements
 - sound OOP design
@@ -95,13 +96,29 @@ CodeBowl is a One Versus One, turn-based, tile-based, risk-management game with 
 - register -> create team -> control panel
 
 ### Game Flow
-1. players for each team are spread out in preset way on either side (maybe add user placement eventually). 
-2. coin toss occurs to see which team 'attacks' first
-3. attacking team has ball put on random square on their side
-4. attacking team players each perform an action (move or attack) until they get knocked down, drop the ball, use all turns, score a point, or end turn early with button
-5. defending team players each perform an action (move or attack) until they get knocked down, or use all turns, have point scored by enemy team, or end turn early with button
-6. game play continues until round limit (10) is reached with 1 turn for each team per round, or all players of a team are dead
-7. winner is team with higher score when game ends
+#### High-Level
+1. Initial Setup
+2. 6 turns per user occur, alternating between users. If User1 kills all players of User2, game is immediately over with User1 as Winner. 
+3. Halftime Setup. User who played offense initially now plays defense and User who played defense now plays offense.
+4. 6 turns per user occur, alternating between users. If User1 kills all players of User2, game is immediately over with User1 as Winner. 
+5. Game ends. Winner is user with most points or draw if even points. 
+
+#### Setup
+1. (on initial setup): 50% roll to determine who plays offense and defense
+2. User who plays defense places their players on their half of the board
+3. User who plays offense places their players on their half of the board
+4. Ball is placed randomly on offense half
+5. Offense player starts their turn
+
+#### Turn Flow
+1. Perform a single action for each player on their team from the following choices: 
+    - Move: move <= the number of `Movement Per Turn` points for that player.
+    - Attack: attempt to knock down / kill an adjacent opponent player.
+2. When an action fails turn for that User ends immediately and other User begins their next turn
+    - attack fails
+    - move fails 
+    - pick up ball fails
+
 
 ### Home Screen Mode
 
