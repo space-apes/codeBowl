@@ -1,0 +1,2 @@
+Blue Team: #2c55d0
+Red Team: #ca2c2c
