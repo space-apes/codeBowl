@@ -1,10 +1,11 @@
 
 # Project 7: CodeBowl
-Turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
-- teams of 7vs7 spread out on 20Lx11W grid
-- team members have varying stats (movement per action, armor, strength, agility)
-- goals are to score points by getting ball into enemy goal zone or remove opponents from field
-- winner is player with highest score after all rounds or player that eliminates all opponents from field
+One Versus One turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+- Turn-Based: User1 chooses actions for players on their team, then User2 chooses actions for players on their team
+- Tile-Based: teams of 7vs7 players spread out on 20Lx11W tile grid
+- Risk-management: all actions have probabilities of failure. Strategy and careful team-building will decrease chances for failure.
+- RPG Elements: teams are built and persist with players having stats that affect their abilities
+- To Win: be player with highest score after all rounds complete or player that eliminates all opponents from field
 
 # High Level Non-Functional Requirements
 - sound OOP design
@@ -17,8 +18,7 @@ Turn-based, tile-based, risk-management game with RPG elements. Based loosely ar
 
 # App Modes / High Level Functional Requirements
 - login mode
-- register/create account mode
-- create team mode
+- register mode
 - manage team mode
 - show leaderboard mode
 - game mode with synchronous game moves and asynchronous chat 
@@ -103,6 +103,17 @@ Turn-based, tile-based, risk-management game with RPG elements. Based loosely ar
 6. game play continues until round limit (10) is reached with 1 turn for each team per round, or all players of a team are dead
 7. winner is team with higher score when game ends
 
+### Home Screen Mode
+
+### Login Mode
+
+### Registration Mode
+
+### User Control Panel Mode
+
+### Game Play Mode
+
+
 ### Team Creation Mode
 - pick name
 - upload team image
@@ -111,10 +122,15 @@ Turn-based, tile-based, risk-management game with RPG elements. Based loosely ar
     - pick name
     - distribute 12 points among 3 stats: Strength, Agility, Movement 
 
+
+
 ### Game Mode Movement Mechanics
-- user may select any of their players that has not finished movement/action to move
+- user may select any of their players that has not finished their action to move
 - movement begins with a left click of a friendly player to select it then left clicks on squares you wish to move within the movement allowance, then end with a click of submit
 - right click cancels movement if not submitted and refreshes squares selected
+- moving over the ball attempts to pick the ball up
+- moving into an enemy attempts a combat attack
+- you may not move into a square with a knocked down player
 - if you move OUT OF a square that is adjacent to an enemy you have a chance to get knocked down
     - if players have equal agility: (60% safe, 40% knocked down) 
     - for each point higher in agility +10% safe, -10% knocked down)
@@ -122,7 +138,7 @@ Turn-based, tile-based, risk-management game with RPG elements. Based loosely ar
 
 ### Game Mode Combat Mechanics
 - a player may only attack adjacent enemies
-- if players have equal strength: (50% knock opponent down, 25% no effect, 25% self gets knocked down)
+- if players have equal strength: (50% knock opponent down, 25% no effect, 25% self gets knocked down) 
 - for each net point advantage, +10% knock down opponent, -5% no effect, -5% self gets knocked down)
 - if multiple allies are adjacent to target enemy, chances for successful knockdown go up 
     - add 1 net point advantage for every ally with equal strength to target
