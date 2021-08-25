@@ -114,7 +114,8 @@ CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG element
 1. Perform a single action for each player on their team from the following choices: 
     - Move: move <= the number of `Movement Per Turn` points for that player.
     - Attack: attempt to knock down / kill an adjacent opponent player.
-2. When an action fails turn for that User ends immediately and other User begins their next turn
+2. Some events cause current user's turn to end immediately and other user's turn to begin
+    - score goal
     - attack fails
     - move fails 
     - pick up ball fails
