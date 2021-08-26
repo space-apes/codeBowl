@@ -10,9 +10,10 @@ CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG element
 
 # High Level Non-Functional Requirements
 - sound OOP design
-- web application
-- multi-user
-- persistent storage
+- 3-tier architecture
+    - Client: browser, desktop app, mobile app, VR, or combinations
+    - Server: Ruby on Rails, Django, Laravel, node.js
+    - Database: SQL
 - attention to common web application security concerns
 - attention to privacy concerns with varying resource access for different types of users
 - networked gameplay mode with 2 simultaneous players per game
