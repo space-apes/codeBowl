@@ -42,8 +42,6 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
-### Ball:
-A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
 
 ### Movement:
 Players can move multiple tiles on their action up to the number of their movement stat. Each step is a transition to an adjacent tile on the board. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
@@ -59,6 +57,9 @@ Players can move multiple tiles on their action up to the number of their moveme
 ![Blue Player risky move fail](images/codeBowlRiskyMoveFail.png)
 <br>
 <i> Blue player succeeds first easy step and second risky step, but fails the third step is knocked down by the opponent player</i>
+
+### Ball:
+Players may move on to a loose ball in order to attempt picking it up. A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
 
 # High Level Non-Functional Requirements
 - sound OOP design
