@@ -38,7 +38,7 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <br>
 <i> Blue player successfully attacks red player and knocks them down.</i>
 
-![Blue Player Attacks Red Player With Ally with Injury](images/codeBowlAttackSuccessyAllyInjury.png)
+![Blue Player Attacks Red Player With Ally with Injury](images/codeBowlAttackSuccessAllyInjury.png)
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
