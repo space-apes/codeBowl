@@ -10,12 +10,10 @@ CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG element
 
 Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone, which is the final set of tiles behind the defensive team. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
 
-During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely when certain events happen, for example: 
-- a player successfully scores a point
-- a player attempts to pick up a loose ball but fails
-- a player attempts to attack an opponent but fails
-- a player attempts to move past an opponent player but gets tripped 
-In the case of any of these events, a user's turn ends immediately and the other user may perform actions for each of their team players. 
+![Code Bowl Initial State](images/codeBowlKickoff.png)
+
+During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely when certain events happen, for example when a player attempts to pick up a loose ball but fails, fails when attempting an attack, or gets tripped when moving past an adjacent enemy. 
+In these cases, a user's turn ends immediately and the other user may perform actions for each of their team players. 
 
 A couple events can occur that cause the teams roles to switch also, where the offensive team becomes the defensive team. 
 - a team scores a point
