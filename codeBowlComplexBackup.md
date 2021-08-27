@@ -50,7 +50,7 @@ Players have a certain number of tiles they are allowed to move per action. When
 
 ![Blue Player safe move](images/codeBowlSuccessfulMove.png)
 <br>
-<i> with no opponents, blue player moves 4 squares with no risk </i>
+<i> Blue player sets up move of 4 tiles with no risk because there are no opponent players </i>
 
 ![Blue Player risky move](images/codeBowlRiskyMove.png)
 <br>
