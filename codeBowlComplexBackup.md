@@ -61,6 +61,18 @@ Players can move multiple tiles on their action up to the number of their moveme
 ### Ball:
 Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 60% chance to successfully pick up the ball and each point of agility increases the success rate by 10%. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
 
+### Optional Advanced Features:
+- when knocking down a player, attacker may select 3 tiles in the direction of the attack for the target to end up
+- players who are knocked outside of board are instantly injured
+- when attacking, a non-successful attack may perform a knock-back with no knockdown
+- if the ball or a player holding the ball end up outside of the left and right border of board, place the ball on a random tile
+- when attacking, only allies that are not adjacent to other opponents may assist you and increase chances of success
+- attack success is based off of difference of strength between attacker and target
+- picking up ball is based on difference of agility of attempter and opponent player adjacent to ball with highest agility
+- players may gain experience that can be used to purchase special abilities that affect their success rates 
+- add an 'armor' stat that offers resistance to being injured
+
+
 # High Level Non-Functional Requirements
 - sound OOP design
 - 3-tier architecture
