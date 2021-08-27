@@ -14,10 +14,13 @@ During a user's turn, each player on their team may perform an action: either mo
 - a player successfully scores a point
 - a player attempts to pick up a loose ball but fails
 - a player attempts to attack an opponent but fails
-- a player attempts to move past an enemy but gets tripped 
-
+- a player attempts to move past an opponent player but gets tripped 
 In the case of any of these events, a user's turn ends immediately and the other user may perform actions for each of their team players. 
 
+A couple events can occur that cause the teams roles to switch also, where the offensive team becomes the defensive team. 
+- a team scores a point
+- a team drops the ball and the other team picks it up
+- when halftime is reached, the original offensive team in the first turn becomes the defensive team and vice versa
 
 
 # High Level Non-Functional Requirements
