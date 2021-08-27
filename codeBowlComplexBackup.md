@@ -1,6 +1,6 @@
 
 # Project 7: CodeBowl
-CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
+CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game. Inspired by classic board game: Blood Bowl. 
 - 1v1: this game is a 2 player competitive game
 - Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
 - Tile-Based: teams of 7 players spread out on 20Lx11W tile grid on their respective sides of the board
@@ -12,13 +12,16 @@ Codebowl is based off of team ball sports like soccer or american football. The 
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 
-During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely when certain events happen, for example when a player attempts to pick up a loose ball but fails, fails when attempting an attack, or gets tripped when moving past an adjacent enemy. 
-In these cases, a user's turn ends immediately and the other user may perform actions for each of their team players. 
+A couple events can occur that cause the teams roles to switch also, where the offensive team becomes the defensive team. This can occur when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
 
-A couple events can occur that cause the teams roles to switch also, where the offensive team becomes the defensive team. 
-- a team scores a point
-- a team drops the ball and the other team picks it up
-- when halftime is reached, the original offensive team in the first turn becomes the defensive team and vice versa
+During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely. A user's turn ends prematurely when a player attempts to pick up a loose ball but fails, fails when attempting an attack, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. 
+
+Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
+- Combat: an attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. 
+- Knockdown: if a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% chance and +5% for each point of strength the attacker has. 
+- Ball: a player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
+- Movement: Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
+ 
 
 
 # High Level Non-Functional Requirements
