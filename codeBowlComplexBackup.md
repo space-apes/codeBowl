@@ -21,7 +21,7 @@ During a turn the user attempts an action for each player on their team, moving 
 Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
 
 ### Combat:
-An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. 
+An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. A successful attack moves the attacker into the tile where the target was, and the target back one tile in the direction of the attack.
 
 ![Blue Player Attacks Red Player With No Ally](images/codeBowlAttackSetupNoAlly.png)
 <br>
@@ -59,7 +59,7 @@ Players can move multiple tiles on their action up to the number of their moveme
 <i> Blue player succeeds first easy step and second risky step, but fails the third step is knocked down by the opponent player</i>
 
 ### Ball:
-Players may move on to a loose ball in order to attempt picking it up. A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
+Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 60% chance to successfully pick up the ball and each point of agility increases the success rate by 10%. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
 
 # High Level Non-Functional Requirements
 - sound OOP design
