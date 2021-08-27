@@ -14,9 +14,9 @@ Codebowl is based off of team ball sports like soccer or american football. The 
 <br>
 <i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board. </i>
 
-Certain events cause teams roles to switch also, where the offensive team becomes the defensive team. This can occur when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
+Certain events cause the offensive team to switch to defense and vice versa: when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
 
-During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely. A user's turn ends prematurely when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. 
+During a turn the user attempts an action for each player on their team, moving across the board, moving into the loose ball to pick it up, or attacking an adjacent opponent player. However some events cause the turn to end before all players can perform an action: when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn.
 
 Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
 
