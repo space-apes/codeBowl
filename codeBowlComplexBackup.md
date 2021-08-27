@@ -54,11 +54,11 @@ Players have a certain number of tiles they are allowed to move per action. When
 
 ![Blue Player risky move](images/codeBowlRiskyMove.png)
 <br>
-<i> Blue player sets up risky move, where first move is safe, but 2nd and 3rd moves are adjacent to enemy, each one with 40% chance to be knocked down. </i>
+<i> Blue player sets up risky move, where first move is safe, but 2nd and 3rd moves are adjacent to enemy, each one with 40% chance to be knocked down </i>
 
 ![Blue Player risky move fail](images/codeBowlRiskyMoveFail.png)
 <br>
-<i> Blue player succeeds first risky step but fails the second one and is knocked down.</i>
+<i> Blue player succeeds first easy step and second risky step, but fails the third step is knocked down by the opponent player</i>
 
 # High Level Non-Functional Requirements
 - sound OOP design
