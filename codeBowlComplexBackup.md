@@ -52,7 +52,7 @@ Players can move multiple tiles on their action up to the number of their moveme
 
 ![Blue Player risky move](images/codeBowlRiskyMove.png)
 <br>
-<i> Blue player sets up risky move, where first move is safe, but 2nd and 3rd moves are adjacent to enemy, each one with 40% chance to be knocked down </i>
+<i> Blue player sets up risky move, where first step is safe, but 2nd and 3rd steps are adjacent to enemy, each one with 40% chance to be knocked down </i>
 
 ![Blue Player risky move fail](images/codeBowlRiskyMoveFail.png)
 <br>
