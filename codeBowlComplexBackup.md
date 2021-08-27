@@ -32,7 +32,7 @@ An attack between 2 players will have a 50% chance to knock the player down, a 2
 <i> Blue player sets up attack on red player with 75% chance success because another blue player is adjacent to target</i>
 
 ### Knockdown and Injury:
-If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% base chance and +5% for each point of strength the attacker has. 
+If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Knocked down players may not trip opponent players that attempt to move adjacent to them. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% base chance and +5% for each point of strength the attacker has. 
 
 ![Blue Player Successfully Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
 <br>
