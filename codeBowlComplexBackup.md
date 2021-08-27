@@ -46,11 +46,11 @@ If a player fails an attack or receives a successful attack they are knocked dow
 A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
 
 ### Movement:
-Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
+Players can move multiple tiles on their action up to the number of their movement stat. Each step is a transition to an adjacent tile on the board. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
 
 ![Blue Player safe move](images/codeBowlSuccessfulMove.png)
 <br>
-<i> Blue player sets up move of 4 tiles with no risk because there are no opponent players </i>
+<i> Blue player has 4 movement stat so sets up move of 4 tiles. There is no risk in this move because the path does not move past tiles adjacent to any opponents </i>
 
 ![Blue Player risky move](images/codeBowlRiskyMove.png)
 <br>
