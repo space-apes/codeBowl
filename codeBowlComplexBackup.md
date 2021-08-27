@@ -2,11 +2,23 @@
 # Project 7: CodeBowl
 CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game or kill them permanently. Inspired by classic board game: Blood Bowl. 
 - 1v1: this game is a 2 player competitive game
-- Turn-Based: User1 chooses actions for players on their team, then User2 chooses actions for players on their team
-- Tile-Based: teams of 7vs7 players spread out on 20Lx11W tile grid
-- Risk-management: all actions players attempt have probabilities of failure. Strategy and careful team-building will decrease those chances
-- RPG Elements: teams are built and persist with players having stats that affect their abilities. Your players may die and you may buy new players with money from games
-- Win Condition: be user with highest score after all rounds complete or user that eliminates all opponents players from field
+- Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
+- Tile-Based: teams of 7 players spread out on 20Lx11W tile grid on their respective sides of the board
+- Risk-management: all actions attempted by players have probabilities of failure. Strategy and careful team-building will decrease those chances
+- RPG Elements: teams are built and persist with players having stats that affect their abilities
+- Win Condition: kill all opponent team members or score more points than opponent by carrying the ball to the enemy goal zone
+
+Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone, which is the final set of tiles behind the defensive team. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
+
+During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely when certain events happen, for example: 
+- a player successfully scores a point
+- a player attempts to pick up a loose ball but fails
+- a player attempts to attack an opponent but fails
+- a player attempts to move past an enemy but gets tripped 
+
+In the case of any of these events, a user's turn ends immediately and the other user may perform actions for each of their team players. 
+
+
 
 # High Level Non-Functional Requirements
 - sound OOP design
