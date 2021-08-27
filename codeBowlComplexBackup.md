@@ -8,7 +8,7 @@ CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG element
 - RPG Elements: players having stats that affect their abilities
 - Win Condition: kill all opponent team members or score more points than opponent by carrying the ball to the enemy goal zone
 
-Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone, which is the final set of tiles behind the defensive team. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
+Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 <br>
