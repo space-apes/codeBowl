@@ -12,7 +12,7 @@ Codebowl is based off of team ball sports like soccer or american football. The 
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 <br>
-<i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board. </i>
+<i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board and the offensive team begins its first turn. </i>
 
 Certain events cause the offensive team to switch to defense and vice versa: when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
 
