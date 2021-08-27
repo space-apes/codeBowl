@@ -5,7 +5,7 @@ CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG element
 - Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
 - Tile-Based: teams of 7 players spread out on 20Lx11W tile grid on their respective sides of the board
 - Risk-management: all actions attempted by players have probabilities of failure. Strategy and careful team-building will decrease those chances
-- RPG Elements: teams are built and persist with players having stats that affect their abilities
+- RPG Elements: players having stats that affect their abilities
 - Win Condition: kill all opponent team members or score more points than opponent by carrying the ball to the enemy goal zone
 
 Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone, which is the final set of tiles behind the defensive team. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
@@ -18,7 +18,18 @@ During a user's turn, each player on their team may perform an action: either mo
 
 Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
 - Combat: an attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. 
+
+![Blue Player Attacks Red Player With No Ally](images/codeBowlAttackSetupNoAlly.png)
+<i> Blue player attacks red player with 50% chance success </i>
+
+![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSetupNoAlly.png)
+<i> Blue player attacks red player with 75% chance success because another blue player is adjacent to target</i>
+
 - Knockdown: if a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% chance and +5% for each point of strength the attacker has. 
+
+![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
+<i> Blue player successfully attacks red player and knocks them down.</i>
+
 - Ball: a player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
 - Movement: Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
  
