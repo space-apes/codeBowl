@@ -14,9 +14,9 @@ Codebowl is based off of team ball sports like soccer or american football. The 
 <br>
 <i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board. </i>
 
-A couple events can occur that cause the teams roles to switch also, where the offensive team becomes the defensive team. This can occur when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
+Certain events cause teams roles to switch also, where the offensive team becomes the defensive team. This can occur when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
 
-During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely. A user's turn ends prematurely when a player attempts to pick up a loose ball but fails, fails when attempting an attack, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. 
+During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely. A user's turn ends prematurely when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. 
 
 Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
 
@@ -32,13 +32,13 @@ An attack between 2 players will have a 50% chance to knock the player down, a 2
 <i> Blue player attacks red player with 75% chance success because another blue player is adjacent to target</i>
 
 ### Knockdown:
-If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% chance and +5% for each point of strength the attacker has. 
+If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% base chance and +5% for each point of strength the attacker has. 
 
-![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
+![Blue Player Successfully Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
 <br>
 <i> Blue player successfully attacks red player and knocks them down.</i>
 
-![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSuccessyAllyInjury.png)
+![Blue Player Attacks Red Player With Ally with Injury](images/codeBowlAttackSuccessyAllyInjury.png)
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
@@ -47,7 +47,18 @@ A player with 0 agility has a 60% chance to successfully pick up the ball. If th
 
 ### Movement:
 Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
- 
+
+![Blue Player safe move](images/codeBowlSuccessfulMove.png)
+<br>
+<i> with no opponents, blue player moves 4 squares with no risk </i>
+
+![Blue Player risky move](images/codeBowlRiskyMove.png)
+<br>
+<i> Blue player sets up risky move, where first move is safe, but 2nd and 3rd moves are adjacent to enemy, each one with 40% chance to be knocked down. </i>
+
+![Blue Player risky move fail](images/codeBowlRiskyMoveFail.png)
+<br>
+<i> Blue player succeeds first risky step but fails the second one and is knocked down.</i>
 
 # High Level Non-Functional Requirements
 - sound OOP design
