@@ -40,14 +40,14 @@ If a player fails an attack or receives a successful attack they are knocked dow
 
 ![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSuccessyAllyInjury.png)
 <br>
-<i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game!</i>
+<i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
 ### Ball:
 A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
+
 ### Movement:
 Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
  
-
 
 # High Level Non-Functional Requirements
 - sound OOP design
