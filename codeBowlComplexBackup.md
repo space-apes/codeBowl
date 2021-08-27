@@ -17,7 +17,9 @@ A couple events can occur that cause the teams roles to switch also, where the o
 During a user's turn, each player on their team may perform an action: either moving or attacking an enemy play in an adjacent square. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn. As we mentioned earlier, this is a risk management game, and there is some probability that a turn ends prematurely. A user's turn ends prematurely when a player attempts to pick up a loose ball but fails, fails when attempting an attack, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. 
 
 Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
-### Combat: an attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. 
+
+### Combat:
+An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. 
 
 ![Blue Player Attacks Red Player With No Ally](images/codeBowlAttackSetupNoAlly.png)
 <br>
@@ -27,7 +29,8 @@ Finally, the strategic element of this game comes ways that users can increase c
 <br>
 <i> Blue player attacks red player with 75% chance success because another blue player is adjacent to target</i>
 
-### Knockdown: if a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% chance and +5% for each point of strength the attacker has. 
+### Knockdown:
+If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% chance and +5% for each point of strength the attacker has. 
 
 ![Blue Player Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
 <br>
@@ -37,8 +40,10 @@ Finally, the strategic element of this game comes ways that users can increase c
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game!</i>
 
-### Ball: a player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
-- Movement: Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
+### Ball:
+A player with 0 agility has a 60% chance to successfully pick up the ball. If they fail, the ball scatters to a random adjacent square and the user's turn ends immediately. Every point of agility increases the chance of successful ball pickup by 10%.
+### Movement:
+Players have a certain number of tiles they are allowed to move per action. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
  
 
 
