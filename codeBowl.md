@@ -1,5 +1,5 @@
 
-# Project 7: CodeBowl
+# Project 7: Board Game
 Project 7 involves the design, implementation, and testing of a networked multiplayer board game following the 3-tier software architecture (client, server, database). 
 You may choose to either to make the classic board game 'checkers' or 'CodeBowl'. 
 
@@ -15,7 +15,7 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
     - guests
     - registered users   
 
-# High Level Features/Functions
+# High Level Functional Requirements
 - home mode 
     - explanation of services offered
     - registered users/guests can view leaderboard with user wins/losses/draws
@@ -34,7 +34,36 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 - spectate game mode
 - game mode with synchronous game moves and asynchronous chat following 'checkers' or 'codebowl' 
 
-# CodeBowl 
+# Checkers Game Description
+Checkers is a 1v1, competitive, turn-based, tile-based game where you move your pieces with the goal of eliminating all opponent pieces or force the opponent into a position where they can not make a valid move. 
+
+1. The board is set up with 8x8 alternating black and white square tiles with a white tile on the bottom right corner like so: 
+2. Black and white pieces are placed on the black squares like so:  
+3. At the beginning one of the two players is randomly selected to control the black pieces. The other player plays the white pieces.
+4. The player controlling black pieces makes a valid move with one of their pieces
+5. The player controlling the white pieces makes a valid move with one of their pieces
+6. Players alternate making valid moves with 1 of their pieces until one team captures all opponent pieces or makes opponent unable to make a valid move. 
+
+# valid moves and "king" mechanic
+- moving piece 
+
+# "king mechanic"
+
+
+
+
+# FINISH UP HERE
+
+
+
+
+
+
+
+
+
+
+# CodeBowl Game Description
 CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. Based around team ball sports like soccer/american football but with ability to knock players out of the game. 
 - 1v1: this game is a 2 player competitive game
 - Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
