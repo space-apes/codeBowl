@@ -1,20 +1,53 @@
 
 # Project 7: CodeBowl
-CodeBowl is a 1v1, turn-based, tile-based, risk-management game with RPG elements. Based loosely around ball sports like soccer/american football but with ability to knock players out of the game. Inspired by classic board game: Blood Bowl. 
+Project 7 involves the design, implementation, and testing of a networked multiplayer board game following the 3-tier software architecture (client, server, database). 
+You may choose to either to make the classic board game 'checkers' or the more challenging 'CodeBowl'. 
+
+# High Level Non-Functional Requirements
+- multi-user networked system
+- 3-tier architecture
+    - Client: browser, desktop app, mobile app, VR, or ability to use multiple clients
+    - Server: Ruby on Rails, Django, Laravel, node.js
+    - Database: SQL
+- sound OOP design with reasoning for all design choices
+- attention to common security concerns
+- attention to privacy concerns with varying resource access for different types of users
+    - guests
+    - registered users   
+
+# High Level Features/Functions
+- home mode 
+    - explanation of services offered
+    - registered users/guests can view leaderboard with user wins/losses/draws
+    - registered users/guests can choose games currently happening and spectate them live 
+    - registered users/guests can see which registered users are currently logged in 
+- login mode
+    - guests may log in as registered users 
+- register mode
+    - guests may create accounts  
+- user control panel mode
+    - private chat with any other registered user currently logged in
+    - search for opponent to play live game and initiate live game mode with that opponent 
+    - (optional) play vs AI
+    - see personal win stats
+- game mode with synchronous game moves and asynchronous chat 
+- show game results mode at end of each game
+- spectate game
+
+# CodeBowl 
+CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. Based around team ball sports like soccer/american football but with ability to knock players out of the game. 
 - 1v1: this game is a 2 player competitive game
 - Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
 - Tile-Based: teams of 7 players spread out on 20Lx11W tile grid on their respective sides of the board
 - Risk-management: all actions attempted by players have probabilities of failure. Strategy and careful team-building will decrease those chances
 - RPG Elements: players having stats that affect their abilities
-- Win Condition: kill all opponent team members or score more points than opponent by carrying the ball to the enemy goal zone
+- Win Conditions: score more points than opponent by carrying ball to goal before turn limit or kill all opponent players.
 
-Codebowl is based off of team ball sports like soccer or american football. The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished.
+The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished. 
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 <br>
 <i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board and the offensive team begins its first turn. </i>
-
-Certain events cause the offensive team to switch to defense and vice versa: when a team successfully scores a point, when a team drops the ball and the other team picks it up, or when the 8th turn ends. 
 
 During a turn the user attempts an action for each player on their team, moving across the board, moving into the loose ball to attempt picking it up, or moving into an adjacent opponent player to attempt an attack. However, some events cause the turn to end before all players can perform an action: when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn.
 
@@ -42,7 +75,6 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
-
 ### Movement:
 Players can move multiple tiles on their action up to the number of their movement stat. Each step is a transition to an adjacent tile on the board. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
 
@@ -61,7 +93,7 @@ Players can move multiple tiles on their action up to the number of their moveme
 ### Ball:
 Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 60% chance to successfully pick up the ball and each point of agility increases the success rate by 10%. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
 
-### Optional Advanced Features:
+### Optional Advanced Game Features:
 - when knocking down a player, attacker may select 3 tiles in the direction of the attack for the target to end up
 - players who are knocked outside of board are instantly injured
 - when attacking, a non-successful attack may perform a knock-back with no knockdown
@@ -73,23 +105,8 @@ Players may move on to a loose ball in order to attempt picking it up. A player 
 - add an 'armor' stat that offers resistance to being injured
 
 
-# High Level Non-Functional Requirements
-- sound OOP design
-- 3-tier architecture
-    - Client: browser, desktop app, mobile app, VR, or combinations
-    - Server: Ruby on Rails, Django, Laravel, node.js
-    - Database: SQL
-- attention to common web application security concerns
-- attention to privacy concerns with varying resource access for different types of users
-- networked gameplay mode with 2 simultaneous players per game
 
-# App Modes / High Level Functional Requirements
-- login mode
-- register mode
-- user control panel mode
-- show leaderboard mode
-- game mode with synchronous game moves and asynchronous chat 
-- show game results mode
+
 
 # User Data / Privacy Requirements
 - persistent user data
