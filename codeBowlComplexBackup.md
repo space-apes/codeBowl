@@ -1,7 +1,7 @@
 
 # Project 7: CodeBowl
 Project 7 involves the design, implementation, and testing of a networked multiplayer board game following the 3-tier software architecture (client, server, database). 
-You may choose to either to make the classic board game 'checkers' or the more challenging 'CodeBowl'. 
+You may choose to either to make the classic board game 'checkers' or 'CodeBowl'. 
 
 # High Level Non-Functional Requirements
 - multi-user networked system
@@ -30,9 +30,9 @@ You may choose to either to make the classic board game 'checkers' or the more c
     - search for opponent to play live game and initiate live game mode with that opponent 
     - (optional) play vs AI
     - see personal win stats
-- game mode with synchronous game moves and asynchronous chat 
 - show game results mode at end of each game
-- spectate game
+- spectate game mode
+- game mode with synchronous game moves and asynchronous chat following 'checkers' or 'codebowl' 
 
 # CodeBowl 
 CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. Based around team ball sports like soccer/american football but with ability to knock players out of the game. 
