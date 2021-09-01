@@ -49,7 +49,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 
 # valid moves 
 
-<div style="display: flex">
+<div style="display: flex; flex-direction: row">
     <img src="images/checkersValidMoveBasicSetup.png">
     <div> -> </div>
     <img src="images/checkersValidMoveBasicResolved.png">
@@ -58,7 +58,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
     regular pieces may move diagonally single tiles 
 </p>
 
-<div style="display: flex">
+<div style="display: flex; flex-direction: row">
     <img src="images/checkersValidMoveCaptureSetup.png">
      <div> -> </div>
     <img src="images/checkersValidMoveCaptureResolved.png">
