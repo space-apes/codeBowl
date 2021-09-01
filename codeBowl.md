@@ -38,8 +38,10 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 # Checkers Game Description
 Checkers is a 1v1, competitive, turn-based, tile-based game where you move your pieces with the goal of eliminating all opponent pieces or force the opponent into a position where they can not make a valid move. 
 
-1. The board is set up with 8x8 alternating black and white square tiles. 12 pieces from each team are placed on opposing sides of the board like so: 
 ![initial board](images/checkersInitialState.png)
+
+### Checkers Overall Gameflow
+1. The board is set up with 8x8 alternating black and white square tiles. 12 pieces from each team are placed on opposing sides of the board like so: 
 2. At the beginning one of the two players is randomly selected to control the black pieces. The other player plays the red pieces.
 3. The player controlling black pieces makes a valid move with one of their pieces
 4. The player controlling the red pieces makes a valid move with one of their pieces
