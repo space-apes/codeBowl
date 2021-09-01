@@ -32,7 +32,7 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
     - game initialization: initial game state
     - turn-based game progression: system recognizes valid moves and updates game state until a win condition occurs
     - game session chat: user may chat with opponent in match
-    -   
+    - results: when win condition occurs, game tracking system is updated with data about the outcome of the game
 
 
 # Checkers Game Description
@@ -50,20 +50,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 
 # valid moves 
 
-<div style="display: flex; flex-direction: row">
-    <img src="images/checkersValidMoveBasicSetup.png">
-    <div> -> </div>
-    <img src="images/checkersValidMoveBasicResolved.png">
-</div>
-<p> 
-    regular pieces may move diagonally single tiles 
-</p>
-
-<div style="display: flex; flex-direction: row">
-    <img src="images/checkersValidMoveCaptureSetup.png">
-     <div> -> </div>
-    <img src="images/checkersValidMoveCaptureResolved.png">
-</div>
+![checkersValidMoveBasicSetup](images/checkersValidMoveBasicSetup.png) ![checkersValidMoveBasicResolved](images/checkersValidMoveBasicResolved.png)
 <p> 
     if an opponent piece is diagonal and adjacent and the tile behind the opponent piece is unoccupied, you may move over the opponent piece. This 'captures' the opponent piece and it is is removed from the board for the rest of the game
 </p>
