@@ -13,7 +13,7 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 - attention to common security concerns
 - attention to privacy concerns with varying resource access for different types of users
     - guests: users who do not have accounts and have restricted access to the system
-    - registered users:    
+    - registered users: users who can    
 
 # High Level Functional Requirements
 - Authentication System
@@ -86,24 +86,26 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. It is based on team ball sports like soccer/american football but with ability to knock players out of the game. Teams of 7 players spread out on 20Lx11W tile board and attempt to score points by carrying the ball to their opponent's goal zone. Any action taken by a player has a chance to fail though users may reduce that chance with careful positioning and consideration of player stats. The winner of the game 
 is the player who has scored the most points after 16 turns or the player who has removed all opponent players from the board. 
 
-![Code Bowl Initial State](images/codeBowlKickOff.png)
-<br>
-<i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board and the offensive team begins its first turn. </i>
-
+### CodeBowl Overall Game Flow
 1. One team is randomly chosen to play offense, the other plays defense. 
-2. The defensive team places their players on their half of the board
+2. The defensive team places their players on their half of the board, then the offensive team places their players on their half of the board
 3. The ball is randomly placed on the offense team's half of the board  
 4. The offensive team performs a turn having each player move, attack, or pick up ball
-5. The defensive team performs a turn having each player move, attack, or pick up ball. Turns continue alternating.aw
+5. The defensive team performs a turn having each player move, attack, or pick up ball. Teams continue taking alternating turns.
 6. After turn 8, the game resets. Offensive team is now defensive team, and vice versa. Pieces are placed and ball is dropped on offensive side.
 7. Teams continue taking turns until the end of the 16th turn or when all players from a team are eliminated. 
 8. The winner of the game is the team that has scored the most points after 16 turns or the team that has removed all opponent players from the board. 
 
-The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished. 
+![Code Bowl Initial State](images/codeBowlKickOff.png)
+<br>
+<i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board and the offensive team begins its first turn. </i>
 
-During a turn the user attempts an action for each player on their team, moving across the board, moving into the loose ball to attempt picking it up, or moving into an adjacent opponent player to attempt an attack. However, some events cause the turn to end before all players can perform an action: when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn.
-
-Finally, the strategic element of this game comes ways that users can increase chances that their player's action will succeed: through careful placement of their players and attention to their player stats: movement, strength, agility. 
+### Turnover Mechanic
+Many actions cause a turn to end when a team has not finished performing an action on all players. 
+- attempting to pick the ball up and failing (66.6% success, 33.3% failure). Failure also scatters ball to random adjacent square.
+- attempting to attack an enemy and failing (50% success, 25% no effect, 25% failure)
+- attempting to run OUT OF a tile adjacent to an opponent player (66.6% success, 33.3% failure)
+- when a team successfully scores, their turn is over. The other team becomes offense, and the game goes through initial setup (place pieces, place ball, offense starts first turn)
 
 ### Combat:
 An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. A successful knockdown moves the attacker into the tile where the target was, and the target back one tile in the direction of the attack.
