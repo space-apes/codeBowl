@@ -70,7 +70,17 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 
 # king piece
 
+![checkersKingBecomingKing](images/checkersKingBecomingKing.png)
+<br>
+<i> 
+    If a piece moves into the final row of their opponents half, the piece is promoted to a king piece. In the tabletop version, this is shown by stacking another piece on top of it. 
+</i>
 
+![checkersKingValidMoves](images/checkersKingValidMoves.png)
+<br>
+<i> 
+   King pieces may perform all the same moves as a regular piece, but can do so in any diagonal direction
+</i>
 
 
 
