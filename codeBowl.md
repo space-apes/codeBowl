@@ -50,7 +50,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
     - one team forces another team into a position where the other team can not make valid moves. The team that can still make valid moves is the winner
     - both teams are unable to make any valid moves. the team with the most 'king' pieces is the winner. 
 
-# valid moves 
+### valid moves 
 
 ![checkersValidMoveBasicSetup](images/checkersValidMoveBasicSetup.png) ![checkersValidMoveBasicResolved](images/checkersValidMoveBasicResolved.png)
 <br>
@@ -70,7 +70,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
     If there are multiple alternating tiles that are empty and have opponent pieces, you must jump multiple times, capturing each opponent piece.
 </i>
 
-# king piece
+### king piece
 
 ![checkersKingBecomingKing](images/checkersKingBecomingKing.png) ![checkersKingValidMoves](images/checkersKingValidMoves.png)
 <br>
