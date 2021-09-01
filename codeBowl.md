@@ -94,8 +94,8 @@ Many actions cause a turn to end when a team has not finished performing an acti
 - attempting to run OUT OF a tile adjacent to an opponent player (66.6% success, 33.3% failure)
 - when a team successfully scores, their turn is over. The other team becomes offense, and the game goes through initial setup (place pieces, place ball, offense starts first turn)
 
-### Combat:
-An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. A successful knockdown moves the attacker into the tile where the target was, and the target back one tile in the direction of the attack.
+### Combat Details:
+A player may attempt to move into an adjacent player in order to attempt an attack. You may not move and then attack, you can only attack enemies already adjacent to you at the beginning of your action. An attack between 2 players will have a 50% chance to knock the player down, a 25% chance to have no effect, and a 25% chance to knock the attacker down ending that user's turn prematurely. If a player attempts an attack and one of his teammates is also adjacent to the target player, there is a 75% chance to knock the player down, a 20% chance to have no effect, and a 5% chance to fail the attack. A successful knockdown moves the attacker into the tile where the target was, and the target back one tile in the direction of the attack.
 
 ![Blue Player Attacks Red Player With No Ally](images/codeBowlAttackSetupNoAlly.png)
 <br>
@@ -105,7 +105,7 @@ An attack between 2 players will have a 50% chance to knock the player down, a 2
 <br>
 <i> Blue player sets up attack on red player with 75% chance success because another blue player is adjacent to target</i>
 
-### Knockdown and Injury:
+### Knockdown and Injury Details:
 If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to trip players or perform an attack. Additionally, when a player is knocked down there is also a chance the player will be injured and removed from the game. This should occur 10% of the time. 
 
 ![Blue Player Successfully Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
@@ -116,7 +116,7 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <br>
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
-### Movement:
+### Movement Details:
 Players can move less than or equal to 5 tiles. Each step is a transition to an adjacent tile on the board in any direction. When players attempt to move OUT OF tiles adjacent to an enemy, they may be tripped triggering their knockdown and injury. 
 
 ![Blue Player safe move](images/codeBowlSuccessfulMove.png)
