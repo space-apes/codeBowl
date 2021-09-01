@@ -122,15 +122,15 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
 ### Movement Details:
-Players can move less than or equal to 5 tiles. Each step is a transition to an adjacent tile on the board in any direction. When players attempt to move OUT OF tiles adjacent to an enemy, they may be tripped triggering their knockdown and injury. 
+Players can move less than or equal to 5 tiles. Each step is a transition to an adjacent tile on the board in any direction. When players attempt to move OUT OF tiles adjacent to an enemy, they may be tripped triggering their knockdown and injury with. Each tile adjacent to an opponent a player moves out of has a 33.3% chance to trigger failure. 
 
 ![Blue Player safe move](images/codeBowlSuccessfulMove.png)
 <br>
-<i> Blue player has 4 movement stat so sets up move of 4 tiles. There is no risk in this move because the path does not move past tiles adjacent to any opponents </i>
+<i> Blue player moves 4 tiles. There is no risk in this move because the path does not move past tiles adjacent to any opponents </i>
 
 ![Blue Player risky move](images/codeBowlRiskyMove.png)
 <br>
-<i> Blue player sets up risky move, where first step is safe, but 2nd and 3rd steps are adjacent to enemy, each one with 40% chance to be knocked down </i>
+<i> Blue player sets up risky move, where first step is safe, but 2nd and 3rd steps are adjacent to enemy, each one with 33.3% chance to be knocked down </i>
 
 ![Blue Player risky move fail](images/codeBowlRiskyMoveFail.png)
 <br>
