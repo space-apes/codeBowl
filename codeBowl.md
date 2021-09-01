@@ -29,7 +29,8 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
     - view game history: users may view records of previous games including participants, winner, score
     - spectate: guests and registered users may join a game session and observe without affecting the game
 - Game System
-    - game initialization: initial game state 
+    - game initialization: initial game state
+    - turn-based game progression: system recognizes valid moves and updates game state until a win condition occurs
     - game session chat: user may chat with opponent in match
     -   
 
@@ -82,19 +83,23 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 
 
 # CodeBowl Game Description
-CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. Based around team ball sports like soccer/american football but with ability to knock players out of the game. 
-- 1v1: this game is a 2 player competitive game
-- Turn-Based: Turns alternate between users where a user chooses actions for their team players then the other user chooses actions for their team players for 16 total turns
-- Tile-Based: teams of 7 players spread out on 20Lx11W tile grid on their respective sides of the board
-- Risk-management: all actions attempted by players have probabilities of failure. Strategy and careful team-building will decrease those chances
-- RPG Elements: players having stats that affect their abilities
-- Win Conditions: score more points than opponent by carrying ball to goal before turn limit or kill all opponent players.
-
-The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished. 
+CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. It is based on team ball sports like soccer/american football but with ability to knock players out of the game. Teams of 7 players spread out on 20Lx11W tile board and attempt to score points by carrying the ball to their opponent's goal zone. Any action taken by a player has a chance to fail though users may reduce that chance with careful positioning and consideration of player stats. The winner of the game 
+is the player who has scored the most points after 16 turns or the player who has removed all opponent players from the board. 
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 <br>
 <i> After both users place their players, the ball is placed on a random tile on the offense team's half of the board and the offensive team begins its first turn. </i>
+
+1. One team is randomly chosen to play offense, the other plays defense. 
+2. The defensive team places their players on their half of the board
+3. The ball is randomly placed on the offense team's half of the board  
+4. The offensive team performs a turn having each player move, attack, or pick up ball
+5. The defensive team performs a turn having each player move, attack, or pick up ball. Turns continue alternating.aw
+6. After turn 8, the game resets. Offensive team is now defensive team, and vice versa. Pieces are placed and ball is dropped on offensive side.
+7. Teams continue taking turns until the end of the 16th turn or when all players from a team are eliminated. 
+8. The winner of the game is the team that has scored the most points after 16 turns or the team that has removed all opponent players from the board. 
+
+The game is divided into two sets of 8 turns called 'halves' where one team plays as 'offense' and the other team plays as 'defense'. At the beginning of each half, the ball is placed on a random tile on the offense's side of the board. The objective of the offensive team is to pick up the ball and run with the ball to the defense side's goal zone. The objective of the defensive team is to prevent the offensive team from scoring before all turns for the half are finished. 
 
 During a turn the user attempts an action for each player on their team, moving across the board, moving into the loose ball to attempt picking it up, or moving into an adjacent opponent player to attempt an attack. However, some events cause the turn to end before all players can perform an action: when a player attempts to pick up a loose ball but fails, attempts an attack but fails, or gets tripped when moving past an adjacent enemy. In these cases, the turn ends and the other user may perform actions for each of their team players. Turns alternate between users: when all players on a team have performed an action, the other team performs their turn.
 
