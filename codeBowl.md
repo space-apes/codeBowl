@@ -94,7 +94,7 @@ is the player who has scored the most points after 16 turns or the player who ha
 5. The defensive team performs a turn having each player move, attack, or pick up ball. Teams continue taking alternating turns.
 6. After turn 8, the game resets. Offensive team is now defensive team, and vice versa. Pieces are placed and ball is dropped on offensive side.
 7. Teams continue taking turns until the end of the 16th turn or when all players from a team are eliminated. 
-8. The winner of the game is the team that has scored the most points after 16 turns or the team that has removed all opponent players from the board. 
+8. Game continues until end of 16th turn or all players of a team are removed from the board. 
 
 ![Code Bowl Initial State](images/codeBowlKickOff.png)
 <br>
@@ -119,7 +119,7 @@ An attack between 2 players will have a 50% chance to knock the player down, a 2
 <i> Blue player sets up attack on red player with 75% chance success because another blue player is adjacent to target</i>
 
 ### Knockdown and Injury:
-If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to trip players or perform an attack. Whenever a player is knocked down there is also a chance the player will be injured and removed from the game: with a 10% base chance and +5% for each point of strength the attacker has. 
+If a player fails an attack or receives a successful attack they are knocked down. This means they drop the ball if they have it and that they must 'stand up' their next action, causing a -3 penalty to their movement and an inability to trip players or perform an attack. Additionally, when a player is knocked down there is also a chance the player will be injured and removed from the game. This should occur 10% of the time. 
 
 ![Blue Player Successfully Attacks Red Player With Ally](images/codeBowlAttackSuccessAlly.png)
 <br>
@@ -130,7 +130,7 @@ If a player fails an attack or receives a successful attack they are knocked dow
 <i> Blue player successfully attacks red player. Unlucky red player is injured and removed from this game.</i>
 
 ### Movement:
-Players can move multiple tiles on their action up to the number of their movement stat. Each step is a transition to an adjacent tile on the board. When players attempt to move near opponent players, they may be tripped triggering their knockdown and injury. When a player with 0 Agility moves OUT OF a tile adjacent to an enemy, there is a 60% chance the move will be successful and 40% chance they are tripped. Every point of agility the player moving has increases chances of success by 10%. 
+Players can move less than or equal to 5 tiles. Each step is a transition to an adjacent tile on the board in any direction. When players attempt to move OUT OF tiles adjacent to an enemy, they may be tripped triggering their knockdown and injury. 
 
 ![Blue Player safe move](images/codeBowlSuccessfulMove.png)
 <br>
@@ -145,9 +145,13 @@ Players can move multiple tiles on their action up to the number of their moveme
 <i> Blue player succeeds first easy step and second risky step, but fails the third step is tripped and knocked down by the opponent player</i>
 
 ### Ball:
-Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 60% chance to successfully pick up the ball and each point of agility increases the success rate by 10%. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
+Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 66.6% chance to successfully pick up the ball and 33.3% chance to fail. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
 
 ### Optional Advanced Game Features:
+- add stats to players
+    - agility can increase chance of successful ball pickup and decrease chance of being tripped when moving adjacent to enemies
+    - strength can increase chances of knockdown and or injury rolls
+    - armor can decrease chances of injury 
 - when knocking down a player, attacker may select 3 tiles in the direction of the attack for the target to end up
 - players who are knocked outside of board are instantly injured
 - when attacking, a non-successful attack may perform a knock-back with no knockdown
