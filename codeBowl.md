@@ -48,14 +48,23 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
     - both teams are unable to make any valid moves. the team with the most 'king' pieces is the winner. 
 
 # valid moves 
-- regular pieces move diagonally along black squares towards opponent side
+
 <div>
     <img src="images/checkersValidMoveBasicSetup.png">
-    ![regular piece valid move setup](images/checkersValidMoveBasicSetup.png) 
-    ![regular piece valid move resolved](images/checkersValidMoveBasicResolved.png)
+    <img src="images/checkersValidMoveBasicResolved.png">
 </div>
+<p> 
+    regular pieces may move diagonally single tiles 
+</p>
 
-- if an opponent piece is diagonal and adjacent and the tile behind the opponent piece is unoccupied, you may move over the opponent piece. This 'captures' the opponent piece and it is is removed from the board for the rest of the game
+<div>
+    <img src="images/checkersValidMoveCaptureSetup.png">
+    <img src="images/checkersValidMoveCaptureResolved.png">
+</div>
+<p> 
+    if an opponent piece is diagonal and adjacent and the tile behind the opponent piece is unoccupied, you may move over the opponent piece. This 'captures' the opponent piece and it is is removed from the board for the rest of the game
+</p>
+
 - 
 
 # king piece
