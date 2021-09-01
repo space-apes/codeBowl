@@ -143,10 +143,10 @@ Players can move less than or equal to 5 tiles. Each step is a transition to an 
 <br>
 <i> Blue player succeeds first easy step and second risky step, but fails the third step is tripped and knocked down by the opponent player</i>
 
-### Ball:
+### Ball Details:
 Players may move on to a loose ball in order to attempt picking it up. A player with base 0 agility has a 66.6% chance to successfully pick up the ball and 33.3% chance to fail. If they fail the pick up, the ball scatters to a random adjacent square and the user's turn ends immediately. If the ball scatters to a tile with a player on it, that player attempts to pick up the ball. This continues until the ball is successfully picked up or lands on an empty tile. 
 
-### Optional Advanced Game Features:
+### CodeBowl Optional Advanced Game Features:
 - add stats to players
     - agility can increase chance of successful ball pickup and decrease chance of being tripped when moving adjacent to enemies
     - strength can increase chances of knockdown and or injury rolls
