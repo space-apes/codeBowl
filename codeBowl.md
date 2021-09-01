@@ -13,13 +13,13 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 - attention to common security concerns
 - attention to privacy concerns with varying resource access for different types of users
     - guests: users who do not have accounts and have restricted access to the system
-    - registered users: users who can    
+    - registered users: users who have can play the game and have data associated with them persisted in the system   
 
 # High Level Functional Requirements
 - Authentication System
-    - register: Guests can register new account 
-    - login: Guests can log in to their account
-    - password recovery/reset: Guests can request that system send them an email with the ability to reset or recover their password 
+    - register: guests can register new account 
+    - login: guests can log in to their account
+    - password recovery/reset: guests can request that system send them an email with the ability to reset or recover their password 
 - User Management System
     - retrieve user statistics: (win rate, previous matches for user, etc) 
     - private chat: registered users can chat with other registered users from any screen
