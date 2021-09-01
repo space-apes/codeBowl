@@ -37,16 +37,18 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 # Checkers Game Description
 Checkers is a 1v1, competitive, turn-based, tile-based game where you move your pieces with the goal of eliminating all opponent pieces or force the opponent into a position where they can not make a valid move. 
 
-1. The board is set up with 8x8 alternating black and white square tiles with a white tile on the bottom right corner like so: 
-2. Black and white pieces are placed on the black squares like so:  
-3. At the beginning one of the two players is randomly selected to control the black pieces. The other player plays the white pieces.
-4. The player controlling black pieces makes a valid move with one of their pieces
-5. The player controlling the white pieces makes a valid move with one of their pieces
-6. Players alternate making valid moves with 1 of their pieces until one team captures all opponent pieces or makes opponent unable to make a valid move. 
+1. The board is set up with 8x8 alternating black and white square tiles. 12 pieces from each team are placed on opposing sides of the board like so: 
+4. At the beginning one of the two players is randomly selected to control the black pieces. The other player plays the red pieces.
+5. The player controlling black pieces makes a valid move with one of their pieces
+6. The player controlling the red pieces makes a valid move with one of their pieces
+7. Players alternate making valid moves with 1 of their pieces untilone of the following occur: 
+    - one team captures all of their opponent's pieces. the remaining team is the winner
+    - 
 
 # valid moves and "king" mechanic
 - regular pieces move diagonally along black squares towards opponent side
-- if an opponent piece is diagonal and adjacent 
+- if an opponent piece is diagonal and adjacent and the tile behind the opponent piece is unoccupied, you may move over the opponent piece. This 'captures' the opponent piece and it is is removed from the board for the rest of the game
+- 
 
 # "king mechanic"
 
