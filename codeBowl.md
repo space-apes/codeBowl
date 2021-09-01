@@ -12,27 +12,27 @@ You may choose to either to make the classic board game 'checkers' or 'CodeBowl'
 - sound OOP design with reasoning for all design choices
 - attention to common security concerns
 - attention to privacy concerns with varying resource access for different types of users
-    - guests
-    - registered users   
+    - guests: users who do not have accounts and have restricted access to the system
+    - registered users:    
 
 # High Level Functional Requirements
-- home screen 
-    - explanation of services offered
-    - registered users/guests can view leaderboard with user wins/losses/draws
-    - registered users/guests can choose games currently happening and spectate them live 
-    - registered users/guests can see which registered users are currently logged in 
-- login screen
-    - guests may log in as registered users 
-- register screen
-    - guests may create accounts  
-- user control panel screen
-    - private chat with any other registered user currently logged in
-    - search for opponent to play live game and initiate live game mode with that opponent 
-    - (optional) play vs AI
-    - see personal win stats
-- game results screen at end of each game 
-- spectate game mode
-- game mode with synchronous game moves and asynchronous chat following 'checkers' or 'codebowl' 
+- Authentication System
+    - register: Guests can register new account 
+    - login: Guests can log in to their account
+    - password recovery/reset: Guests can request that system send them an email with the ability to reset or recover their password 
+- User Management System
+    - retrieve user statistics: (win rate, previous matches for user, etc) 
+    - private chat: registered users can chat with other registered users from any screen
+    - search for game: registered users may search for an opponent to play a game against
+    - initiate game: registered users may initiate a game
+- Game Tracking System
+    - view game history: users may view records of previous games including participants, winner, score
+    - spectate: guests and registered users may join a game session and observe without affecting the game
+- Game System
+    - game initialization: initial game state 
+    - game session chat: user may chat with opponent in match
+    -   
+
 
 # Checkers Game Description
 Checkers is a 1v1, competitive, turn-based, tile-based game where you move your pieces with the goal of eliminating all opponent pieces or force the opponent into a position where they can not make a valid move. 
@@ -42,7 +42,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 2. At the beginning one of the two players is randomly selected to control the black pieces. The other player plays the red pieces.
 3. The player controlling black pieces makes a valid move with one of their pieces
 4. The player controlling the red pieces makes a valid move with one of their pieces
-5. Players alternate making valid moves with 1 of their pieces untilone of the following occur: 
+5. Players alternate making valid moves with 1 of their pieces until the end of the game is reached during one of the following 3 conditions: 
     - one team captures all of their opponent's pieces. the remaining team is the winner
     - one team forces another team into a position where the other team can not make valid moves. The team that can still make valid moves is the winner
     - both teams are unable to make any valid moves. the team with the most 'king' pieces is the winner. 
