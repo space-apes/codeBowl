@@ -83,7 +83,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
 
 
 # CodeBowl Game Description
-CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. It is based on team ball sports like soccer/american football but with ability to knock players out of the game. Teams of 7 players spread out on 20Lx11W tile board and attempt to score points by carrying the ball to their opponent's goal zone. Any action taken by a player has a chance to fail though users may reduce that chance with careful positioning and consideration of player stats. The winner of the game 
+CodeBowl is a 1v1, turn-based, tile-based, risk-management board game with RPG elements. It is based on team ball sports like soccer/american football but with ability to knock players out of the game. Teams of 7 players spread out on 20Lx11W tile board and attempt to score points by carrying the ball to their opponent's goal zone. Any action taken by a player has a chance to fai,l though users may reduce that chance with careful positioning and consideration of player stats. The winner of the game 
 is the player who has scored the most points after 16 turns or the player who has removed all opponent players from the board. 
 
 ### CodeBowl Overall Game Flow
