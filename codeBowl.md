@@ -78,7 +78,7 @@ Checkers is a 1v1, competitive, turn-based, tile-based game where you move your 
     If a piece moves into the final row of their opponents half, the piece is promoted to a king piece. In the tabletop version, this is shown by stacking another piece on top of it. King pieces may perform all the same moves as a regular piece, but can do so both towards or away from the opponent's side. 
 </i>
 
-
+### Win Conditions ####################################################################################################################################################################################################################TODO###############################################
 
 
 # CodeBowl Game Description
